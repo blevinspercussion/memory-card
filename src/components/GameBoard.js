@@ -1,7 +1,7 @@
 import Card from "./Card";
 import "./component_styles.css";
 
-function GameBoard() {
+function GameBoard(props) {
   return (
     <div className="gameboard">
       <Card />

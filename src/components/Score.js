@@ -1,10 +1,10 @@
 import "./component_styles.css";
 
-function Score() {
+function Score({ score, bestScore }) {
   return (
     <div>
-      <h3>Current: </h3>
-      <h3>Best: </h3>
+      <h3>Current: {score}</h3>
+      <h3>Best: {bestScore}</h3>
     </div>
   );
 }
