@@ -5,6 +5,13 @@ function GameBoard() {
   return (
     <div className="gameboard">
       <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
