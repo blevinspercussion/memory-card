@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="header">
         <Title />
-        <Score />
+        <Score className="score" />
       </div>
       <div>
         <GameBoard />
