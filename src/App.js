@@ -3,13 +3,14 @@ import Score from "./components/Score";
 import GameBoard from "./components/GameBoard";
 
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   // Initialize state
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [alreadySelected, setAlreadySelected] = useState([]);
+  const [shuffledCharacters, setShuffledCharacters] = useState([]);
 
   // Define props
   const characters = ["L", "Light", "Mello", "Misa", "Near", "Rem", "Ryuk"];
@@ -34,15 +35,21 @@ function App() {
       setScore(0);
       setAlreadySelected([]);
     }
+    shuffleCharacters(characters);
     // console.log(alreadySelected);
   };
 
-  const shuffleCharacters = (characters) => {
-    console.log(characters);
-    let shuffledCharacters = characters.sort((a, b) => 0.5 - Math.random());
-    console.log(shuffledCharacters);
+  const shuffleCharacters = (characters, shuffledCharacters) => {
+    shuffledCharacters = setShuffledCharacters(
+      characters.sort((a, b) => 0.5 - Math.random())
+    );
     return shuffledCharacters;
   };
+
+  // useEffect(() => {
+  //   shuffleCharacters(characters, shuffleCharacters);
+  //   console.log(shuffledCharacters);
+  // });
 
   return (
     <div className="App">
@@ -60,6 +67,7 @@ function App() {
           characters={characters}
           shuffleCharacters={shuffleCharacters}
           handleClick={handleClick}
+          shuffledCharacters={shuffledCharacters}
         />
       </div>
     </div>

@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import Card from "./Card";
 import "./component_styles.css";
 
-function GameBoard(props, { characters, handleClick }) {
-  //   useEffect(() => {}, []);
+function GameBoard(props, { characters, handleClick, shuffledCharacters }) {
+  useEffect(() => {}, [shuffledCharacters]);
 
   const cardClick = (name) => {
-    console.log(props.characters);
+    console.log(props.shuffledCharacters);
 
     props.handleClick(name);
   };
@@ -15,7 +15,7 @@ function GameBoard(props, { characters, handleClick }) {
 
   return (
     <div className="gameboard">
-      {props.characters.map((index, name) => (
+      {props.characters.map((index) => (
         <Card key={index} name={index} img={index.name} cardClick={cardClick} />
       ))}
     </div>
