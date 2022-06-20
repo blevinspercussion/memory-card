@@ -6,8 +6,9 @@ function GameBoard(props, { characters, handleClick }) {
   //   useEffect(() => {}, []);
 
   const cardClick = (name) => {
-    console.log(name + 2);
-    handleClick(name);
+    console.log(props.characters);
+
+    props.handleClick(name);
   };
 
   const drawCards = (characters) => {};
@@ -15,7 +16,7 @@ function GameBoard(props, { characters, handleClick }) {
   return (
     <div className="gameboard">
       {props.characters.map((index, name) => (
-        <Card key={index} name={index} img={index.name} />
+        <Card key={index} name={index} img={index.name} cardClick={cardClick} />
       ))}
 
       {/* <Card cardClick={cardClick} />

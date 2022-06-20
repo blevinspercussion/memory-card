@@ -1,6 +1,7 @@
 import Title from "./components/Title";
 import Score from "./components/Score";
 import GameBoard from "./components/GameBoard";
+
 import "./App.css";
 import { useState } from "react";
 

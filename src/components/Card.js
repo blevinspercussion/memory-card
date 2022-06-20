@@ -21,7 +21,7 @@ function Card({ cardClick, name, img }) {
         alt={name}
         onClick={handleCardClick}
       ></img>
-      <h2 className="card-name">L</h2>
+      <h2 className="card-name">{name}</h2>
     </div>
   );
 }
