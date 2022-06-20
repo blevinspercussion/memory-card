@@ -7,10 +7,20 @@ import Rem from "./img/Rem.webp";
 import Ryuk from "./img/Ryuk.webp";
 import "./component_styles.css";
 
-function Card() {
+function Card({ cardClick, name, img }) {
+  const handleCardClick = (e) => {
+    console.log(e.target.name);
+    cardClick(e.target.name);
+  };
+
   return (
     <div className="card">
-      <img src={L} alt="L"></img>
+      <img
+        name={name}
+        src={require("./img/" + name + ".webp")}
+        alt={name}
+        onClick={handleCardClick}
+      ></img>
       <h2 className="card-name">L</h2>
     </div>
   );

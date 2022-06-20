@@ -8,6 +8,7 @@ function App() {
   // Initialize state
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [alreadySelected, setAlreadySelected] = useState([]);
 
   // Define props
   const characters = ["L", "Light", "Mello", "Misa", "Near", "Rem", "Ryuk"];
@@ -24,6 +25,18 @@ function App() {
     }
   };
 
+  const handleClick = (character) => {
+    setAlreadySelected(alreadySelected.concat(character));
+    console.log(alreadySelected);
+  };
+
+  const shuffleCharacters = (characters) => {
+    console.log(characters);
+    let shuffledCharacters = characters.sort((a, b) => 0.5 - Math.random());
+    console.log(shuffledCharacters);
+    return shuffledCharacters;
+  };
+
   return (
     <div className="App">
       <div className="header">
@@ -36,7 +49,11 @@ function App() {
         />
       </div>
       <div>
-        <GameBoard characters={characters} />
+        <GameBoard
+          characters={characters}
+          shuffleCharacters={shuffleCharacters}
+          handleClick={handleClick}
+        />
       </div>
     </div>
   );
