@@ -18,15 +18,6 @@ function GameBoard(props, { characters, handleClick }) {
       {props.characters.map((index, name) => (
         <Card key={index} name={index} img={index.name} cardClick={cardClick} />
       ))}
-
-      {/* <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} />
-      <Card cardClick={cardClick} /> */}
     </div>
   );
 }

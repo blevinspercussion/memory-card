@@ -27,8 +27,14 @@ function App() {
   };
 
   const handleClick = (character) => {
-    setAlreadySelected(alreadySelected.concat(character));
-    console.log(alreadySelected);
+    if (!alreadySelected.includes(character)) {
+      scoreUp(score);
+      setAlreadySelected(alreadySelected.concat(character));
+    } else {
+      setScore(0);
+      setAlreadySelected([]);
+    }
+    // console.log(alreadySelected);
   };
 
   const shuffleCharacters = (characters) => {
