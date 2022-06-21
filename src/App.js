@@ -18,7 +18,7 @@ function App() {
   // Functions
   const scoreUp = (score) => {
     setScore((score += 1));
-    bestScoreCheck(score);
+    bestScoreCheck(score, bestScore);
   };
 
   const bestScoreCheck = (score, bestScore) => {
