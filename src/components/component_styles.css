@@ -29,3 +29,9 @@
 img {
     max-width: 300px;
 }
+
+hr {
+    /* flex-grow: 1; */
+    width: 90%;
+    border-top: 2px solid rgb(112, 3, 3);
+}

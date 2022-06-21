@@ -62,8 +62,10 @@ function App() {
           scoreUp={scoreUp}
         />
       </div>
+      <hr />
       <div>
         <GameBoard
+          className="gameboard"
           characters={characters}
           shuffleCharacters={shuffleCharacters}
           handleClick={handleClick}
