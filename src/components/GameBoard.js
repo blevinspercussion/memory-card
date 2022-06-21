@@ -11,11 +11,11 @@ function GameBoard(props, { characters, handleClick, shuffledCharacters }) {
     props.handleClick(name);
   };
 
-  const drawCards = (characters) => {};
+  //   const drawCards = (characters) => {};
 
   return (
     <div className="gameboard">
-      {props.characters.map((index) => (
+      {props.shuffledCharacters.map((index) => (
         <Card key={index} name={index} img={index.name} cardClick={cardClick} />
       ))}
     </div>

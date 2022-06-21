@@ -46,10 +46,10 @@ function App() {
     return shuffledCharacters;
   };
 
-  // useEffect(() => {
-  //   shuffleCharacters(characters, shuffleCharacters);
-  //   console.log(shuffledCharacters);
-  // });
+  useEffect(() => {
+    shuffleCharacters(characters, shuffleCharacters);
+    console.log(shuffledCharacters);
+  }, []);
 
   return (
     <div className="App">
