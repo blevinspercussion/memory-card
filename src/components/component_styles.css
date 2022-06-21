@@ -8,7 +8,7 @@
 }
 
 .card {
-    border: 2px solid black;
+    border: 2px solid rgba(160, 0, 0, 0.531);
     border-radius: 15px;
     box-shadow: 5px 5px 10px;
     margin: 25px;
@@ -28,6 +28,7 @@
 
 img {
     max-width: 300px;
+    max-height: 300px;
     border-radius: 15px;
 }
 

@@ -13,7 +13,19 @@ function App() {
   const [shuffledCharacters, setShuffledCharacters] = useState([]);
 
   // Define props
-  const characters = ["L", "Light", "Mello", "Misa", "Near", "Rem", "Ryuk"];
+  const characters = [
+    "L",
+    "Light",
+    "Matt",
+    "Mello",
+    "Misa",
+    "Near",
+    "Rem",
+    "Ryuk",
+    "Teru",
+    "Wedy",
+    "Yuri",
+  ];
 
   // Functions
   const scoreUp = (score) => {
